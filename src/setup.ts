@@ -31,7 +31,7 @@ async function main(): Promise<void> {
     console.error('\nAuthentication successful!');
     console.error(`Logged in as: ${auth.displayName}`);
     console.error('Tokens saved to ~/.garmin-mcp/');
-    console.error('\nYou can now restart Claude Desktop — the MCP server will use the saved tokens.');
+    console.error('\nYou can now restart your MCP client (including ChatGPT) — the server will use the saved tokens.');
   } catch (error) {
     console.error('\nAuthentication failed:', error instanceof Error ? error.message : error);
     process.exit(1);

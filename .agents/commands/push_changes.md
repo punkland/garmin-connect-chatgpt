@@ -1,5 +1,3 @@
-<!-- Compatibility mirror of `.agents/commands/push_changes.md`. -->
-
 You are an AI assistant tasked with creating well-structured GitHub commits for pull requests to the staging branch.
 
 First, you will be given an instruction. Here they are:

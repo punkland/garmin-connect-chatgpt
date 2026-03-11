@@ -24,7 +24,7 @@
     "model-context-protocol",
     "fitness",
     "health",
-    "claude"
+    "chatgpt"
   ],
   "license": "MIT",
   "dependencies": {

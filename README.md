@@ -1,6 +1,6 @@
 # garmin-connect-mcp
 
-MCP server for Garmin Connect. Access your fitness, health, and training data from Claude Code, Claude Desktop, Cursor, Windsurf, or any MCP client.
+MCP server for Garmin Connect. Access your fitness, health, and training data from ChatGPT, Cursor, Windsurf, or any MCP client.
 
 **61 tools** across 7 categories: activities, daily health, trends, sleep, body composition, performance/training, and profile/devices.
 
@@ -13,15 +13,9 @@ API endpoints and authentication flow based on [`python-garminconnect`](https://
 
 ## Installation
 
-### Claude Code
+### ChatGPT
 
-```bash
-claude mcp add garmin -e GARMIN_EMAIL=you@email.com -e GARMIN_PASSWORD=yourpass -- npx -y @nicolasvegam/garmin-connect-mcp
-```
-
-### Claude Desktop
-
-Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS) or `%APPDATA%\Claude\claude_desktop_config.json` (Windows):
+If your ChatGPT client supports MCP server configuration, add this server using:
 
 ```json
 {
@@ -36,6 +30,12 @@ Add to `~/Library/Application Support/Claude/claude_desktop_config.json` (macOS)
     }
   }
 }
+```
+
+Or run it directly:
+
+```bash
+GARMIN_EMAIL=you@email.com GARMIN_PASSWORD=yourpass npx -y @nicolasvegam/garmin-connect-mcp
 ```
 
 ### Cursor
