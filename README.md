@@ -181,6 +181,23 @@ The server communicates over stdio using the [Model Context Protocol](https://mo
 
 Uses Garmin Connect credentials (email/password) via environment variables. OAuth tokens are cached in `~/.garmin-mcp/` to avoid re-authentication on each request.
 
+### Multi-account mode
+
+You can run one MCP server process for multiple Garmin accounts by configuring `GARMIN_ACCOUNTS` (or `GARMIN_USERS`) as a JSON object and optionally setting `GARMIN_DEFAULT_ACCOUNT`.
+
+```bash
+GARMIN_ACCOUNTS='{
+  "julio": { "email": "julio@example.com", "password": "secret" },
+  "coach": { "email": "coach@example.com", "password": "secret2" }
+}' \
+GARMIN_DEFAULT_ACCOUNT=julio \
+npx -y @nicolasvegam/garmin-connect-mcp
+```
+
+Every tool accepts an optional `account` input. When multiple accounts are configured and no default account is set, `account` becomes required.
+
+OAuth tokens are cached per account under `~/.garmin-mcp/<account-namespace>/`, so accounts do not overwrite each other's session state.
+
 ### MFA (Multi-Factor Authentication)
 
 If your Garmin account has MFA enabled (required for devices with ECG capabilities), you need to run the interactive setup once before using the MCP server:

@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "garmin": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "/Users/julioamotolinia/nestjs/garmin/garmin-connect-chatgpt/build/index.js"
+      ],
+      "env": {
+        "GARMIN_EMAIL": "momja7@gmail.com",
+        "GARMIN_PASSWORD": "24?fJ,4vb"
+      }
+    }
+  }
+}

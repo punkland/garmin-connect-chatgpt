@@ -102,8 +102,8 @@ function todayString(): string {
 export class GarminClient {
   private auth: GarminAuth;
 
-  constructor(email: string, password: string, promptMfa?: () => Promise<string>) {
-    this.auth = new GarminAuth(email, password, promptMfa);
+  constructor(email: string, password: string, promptMfa?: () => Promise<string>, accountKey?: string) {
+    this.auth = new GarminAuth(email, password, promptMfa, accountKey);
   }
 
   private request<T>(endpoint: string, options?: RequestOptions): Promise<T> {
